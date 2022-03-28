@@ -341,7 +341,7 @@ rcl_timer_get_time_since_last_call(
 }
 
 rcl_ret_t
-rcl_timer_get_period(const rcl_timer_t * timer, int64_t * period)
+rcl_timer_get_period(const rcl_timer_t * timer, uint64_t * period)
 {
   RCL_CHECK_ARGUMENT_FOR_NULL(timer, RCL_RET_INVALID_ARGUMENT);
   RCL_CHECK_ARGUMENT_FOR_NULL(timer->impl, RCL_RET_TIMER_INVALID);
@@ -351,7 +351,7 @@ rcl_timer_get_period(const rcl_timer_t * timer, int64_t * period)
 }
 
 rcl_ret_t
-rcl_timer_exchange_period(const rcl_timer_t * timer, int64_t new_period, int64_t * old_period)
+rcl_timer_exchange_period(const rcl_timer_t * timer, uint64_t new_period, uint64_t * old_period)
 {
   RCUTILS_CAN_RETURN_WITH_ERROR_OF(RCL_RET_INVALID_ARGUMENT);
 
