@@ -63,6 +63,8 @@ RCL_WARN_UNUSED
 rcl_timer_t
 rcl_get_zero_initialized_timer(void);
 
+void rcl_check(void);
+
 /// Initialize a timer.
 /**
  * A timer consists of a clock, a callback function and a period.
